@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handlebars Pratials</title>
+</head>
+<body>
+
+  <!-- {{> templateone}}
+  {{> test}} -->
+
+  <div data-hb-output="templateone" data-hb-params='{"data": "stuffone"}'></div>
+  <div data-hb-output="templatetwo" data-hb-params='{"data": "stufftwo"}'></div>
+  <div data-hb-output="templatetwo" data-hb-params='{"data": "stufftwopoint1"}'></div>
+  <div data-hb-output="templatetwo" data-hb-params='{"data": "stufftwopoint2"}'></div>
+
+  <script type="text/x-handlebars-template">
+    <div data-hb-input="templateone">
+      {{data}}
+    </div>
+    <div data-hb-input="templatetwo">
+      {{data}}
+    </div>
+    <div data-hb-input="templatethree">
+      {{data}}
+    </div>
+  </script>
+  <script src="/node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="script/script.js"></script>
+</body>
+</html>
